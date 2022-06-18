@@ -35,7 +35,7 @@ function CardImage(props) {
                         <CardText>
                             {props.description}
                         </CardText>
-                        <CardText style={{ display: 'flex', justifyContent: "space-between", }} >
+                        <CardText style={{ display: 'flex', fontSize: "25px", justifyContent: "space-between", }} >
                             <small className="text-muted">
                                 updated <Moment toNow>{props.created}</Moment>
                             </small>
