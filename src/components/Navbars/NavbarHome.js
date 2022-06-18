@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { AiOutlineSearch } from 'react-icons/ai'
 // reactstrap components
 import {
     Collapse,
@@ -113,7 +114,7 @@ function NavbarHome() {
                                     <InputGroup>
                                         <InputGroupAddon addonType="prepend">
                                             <InputGroupText>
-                                                <i className="fa-solid fa-magnifying-glass"></i>
+                                                <AiOutlineSearch />
                                             </InputGroupText>
                                         </InputGroupAddon>
                                         <Input placeholder="Search..." type="text"></Input>
