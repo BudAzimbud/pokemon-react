@@ -1,4 +1,4 @@
-import NavbarHome from 'Component/NavbarHome'
+import NavbarHome from 'components/Navbars/NavbarHome'
 import TransparentFooter from 'components/Footers/TransparentFooter';
 import React from 'react'
 import { Container } from 'reactstrap'
@@ -19,9 +19,9 @@ function PublicRoute({ children }) {
     return (
         <>
             <NavbarHome />
-            <Container className='wrapper mt-5'>
+            <div className='mt-5 wrapper-children'>
                 {children}
-            </Container>
+            </div>
             <TransparentFooter />
         </>
     )

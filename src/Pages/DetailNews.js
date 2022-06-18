@@ -14,10 +14,12 @@ import {
 
 // core components
 import LandingPageHeader from "components/Headers/LandingPageHeader.js";
+import { useHistory } from "react-router";
 
 function DetailNew() {
     const [firstFocus, setFirstFocus] = React.useState(false);
     const [lastFocus, setLastFocus] = React.useState(false);
+    const history = useHistory()
     React.useEffect(() => {
         document.body.classList.add("landing-page");
         document.body.classList.add("sidebar-collapse");
@@ -176,7 +178,10 @@ function DetailNew() {
                                         className="btn-round"
                                         color="info"
                                         href="#pablo"
-                                        onClick={(e) => e.preventDefault()}
+                                        onClick={(e) => {
+                                            history.push("/login")
+                                            e.preventDefault()
+                                        }}
                                         size="lg"
                                     >
                                         Send Message

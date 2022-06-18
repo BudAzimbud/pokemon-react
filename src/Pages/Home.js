@@ -1,18 +1,24 @@
-import CardImage from 'Component/CardImage'
+import CardImage from 'components/Card/CardImage'
 import React from 'react'
-import { Row, Container } from 'reactstrap'
-import { Link } from 'react-router-dom'
+import { Row, Col } from 'reactstrap'
 
 function Home() {
     return (
-        <Container>
-            <Row className="ml-1 gap-5 p-4">
-                <CardImage />
-                <CardImage />
-                <CardImage />
-                <CardImage />
-            </Row>
-        </Container>
+        <Row>
+            <Col xl={9}>
+                <Row className="gap-5 p-4">
+                    <CardImage />
+                    <CardImage />
+                    <CardImage />
+                    <CardImage />
+                </Row>
+            </Col>
+            <Col xl={3}>
+                test
+            </Col>
+
+        </Row>
+
     )
 }
 

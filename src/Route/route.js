@@ -1,6 +1,6 @@
 import DetailNews from "Pages/DetailNews";
 import Home from "Pages/Home";
-import LoginPage from "views/examples/LoginPage";
+import LoginPage from "Pages/Login";
 
 
 const routes = [

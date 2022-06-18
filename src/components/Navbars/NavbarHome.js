@@ -14,6 +14,11 @@ import {
     Nav,
     Container,
     UncontrolledTooltip,
+    Form,
+    InputGroup,
+    InputGroupAddon,
+    InputGroupText,
+    Input,
 } from "reactstrap";
 
 function NavbarHome() {
@@ -31,7 +36,8 @@ function NavbarHome() {
                 />
             ) : null}
             <Navbar className="fixed-top" color="info" expand="lg">
-                <Container>
+                <Container >
+
                     <UncontrolledDropdown className="button-dropdown">
                         <DropdownToggle
                             caret
@@ -98,54 +104,71 @@ function NavbarHome() {
                         isOpen={collapseOpen}
                         navbar
                     >
+
                         <Nav navbar>
                             <NavItem>
+                                <Form data-background-color="">
+                                    <InputGroup>
+                                        <InputGroupAddon addonType="prepend">
+                                            <InputGroupText>
+                                                <i class="fa-solid fa-magnifying-glass"></i>
+                                            </InputGroupText>
+                                        </InputGroupAddon>
+                                        <Input placeholder="Search..." type="text"></Input>
+                                    </InputGroup>
+                                </Form>
+                            </NavItem>
+                            <NavItem>
                                 <NavLink to="/index" tag={Link}>
-                                    Back to Kit
+                                    KIRIM SURAT
                                 </NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink href="https://github.com/creativetimofficial/now-ui-kit-react/issues?ref=creativetim">
-                                    Have an issue?
+                                <NavLink to="/index" tag={Link}>
+                                    SURAT PEMBACA
                                 </NavLink>
                             </NavItem>
+                            <NavItem>
+                                <NavLink to="/index" tag={Link}>
+                                    TANGGAPAN
+                                </NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink to="/index" tag={Link}>
+                                    BERITA
+                                </NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink to="/index" tag={Link}>
+                                    OPINI
+                                </NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink to="/index" tag={Link}>
+                                    WAWASAN
+                                </NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink to="/index" tag={Link}>
+                                    REVIEW
+                                </NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink to="/index" tag={Link}>
+                                    TENTANG KAMI
+                                </NavLink>
+                            </NavItem>
+
                             <NavItem>
                                 <NavLink
-                                    href="https://twitter.com/CreativeTim?ref=creativetim"
-                                    target="_blank"
-                                    id="twitter-tooltip"
+                                    href="/login"
+                                    id="login-tooltip"
                                 >
-                                    <i className="fab fa-twitter"></i>
-                                    <p className="d-lg-none d-xl-none">Twitter</p>
+                                    <i class="fa-solid fa-user"></i>
+                                    <p className="d-lg-none d-xl-none">Masuk</p>
                                 </NavLink>
-                                <UncontrolledTooltip target="#twitter-tooltip">
-                                    Follow us on Twitter
-                                </UncontrolledTooltip>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink
-                                    href="https://www.facebook.com/CreativeTim?ref=creativetim"
-                                    target="_blank"
-                                    id="facebook-tooltip"
-                                >
-                                    <i className="fab fa-facebook-square"></i>
-                                    <p className="d-lg-none d-xl-none">Facebook</p>
-                                </NavLink>
-                                <UncontrolledTooltip target="#facebook-tooltip">
-                                    Like us on Facebook
-                                </UncontrolledTooltip>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink
-                                    href="https://www.instagram.com/CreativeTimOfficial?ref=creativetim"
-                                    target="_blank"
-                                    id="instagram-tooltip"
-                                >
-                                    <i className="fab fa-instagram"></i>
-                                    <p className="d-lg-none d-xl-none">Instagram</p>
-                                </NavLink>
-                                <UncontrolledTooltip target="#instagram-tooltip">
-                                    Follow us on Instagram
+                                <UncontrolledTooltip target="#login-tooltip">
+                                    Masuk
                                 </UncontrolledTooltip>
                             </NavItem>
                         </Nav>
