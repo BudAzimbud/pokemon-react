@@ -1,7 +1,6 @@
 import NavbarHome from 'components/Navbars/NavbarHome'
 import TransparentFooter from 'components/Footers/TransparentFooter';
 import React from 'react'
-import { Container } from 'reactstrap'
 
 function PublicRoute({ children }) {
     React.useEffect(() => {

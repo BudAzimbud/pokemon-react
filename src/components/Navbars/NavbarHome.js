@@ -111,7 +111,7 @@ function NavbarHome() {
                                     <InputGroup>
                                         <InputGroupAddon addonType="prepend">
                                             <InputGroupText>
-                                                <i class="fa-solid fa-magnifying-glass"></i>
+                                                <i className="fa-solid fa-magnifying-glass"></i>
                                             </InputGroupText>
                                         </InputGroupAddon>
                                         <Input placeholder="Search..." type="text"></Input>
@@ -164,7 +164,7 @@ function NavbarHome() {
                                     href="/login"
                                     id="login-tooltip"
                                 >
-                                    <i class="fa-solid fa-user"></i>
+                                    <i className="fa-solid fa-user"></i>
                                     <p className="d-lg-none d-xl-none">Masuk</p>
                                 </NavLink>
                                 <UncontrolledTooltip target="#login-tooltip">

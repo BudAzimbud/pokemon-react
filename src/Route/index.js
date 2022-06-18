@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import PublicRoute from './PublicRoute'
 import routes from './route'
 
@@ -8,7 +8,6 @@ function index() {
         <div>
             <BrowserRouter>
                 <Switch>
-
                     {routes.map((route, index) => {
                         if (route.public) {
                             return (
@@ -20,7 +19,6 @@ function index() {
                         )
 
                     })}
-
                 </Switch>
             </BrowserRouter>
         </div>

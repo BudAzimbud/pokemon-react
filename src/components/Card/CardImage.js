@@ -1,10 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Col, Card, CardImg, CardText, CardTitle, CardBody } from 'reactstrap'
-function CardImage() {
+import Moment from 'react-moment';
+
+function CardImage(props) {
     return (
         <Col xl={6} sm={12} md={6} style={{ width: '40rem' }}>
-            <Link to="/berita/konten-seger" >
+            <Link to={"berita/" + props.slug} >
                 <Card>
                     <CardImg
                         alt="Card image cap"
@@ -13,15 +15,15 @@ function CardImage() {
                         width="100%"
                     />
                     <CardBody className='text-dark' >
-                        <CardTitle tag="h5" >
-                            Card Title
+                        <CardTitle tag="h5" style={{ fontWeight: 'bold' }} >
+                            {props.title}
                         </CardTitle>
                         <CardText>
-                            This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                            {props.description}
                         </CardText>
                         <CardText>
                             <small className="text-muted">
-                                Last updated 3 mins ago
+                                updated <Moment toNow>{props.created}</Moment>
                             </small>
                         </CardText>
                     </CardBody>

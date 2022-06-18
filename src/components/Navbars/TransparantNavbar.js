@@ -16,7 +16,7 @@ import {
   UncontrolledTooltip,
 } from "reactstrap";
 
-function ExamplesNavbar() {
+function TransparantNavbar() {
   const [navbarColor, setNavbarColor] = React.useState("");
   const [collapseOpen, setCollapseOpen] = React.useState(false);
   React.useEffect(() => {
@@ -175,4 +175,4 @@ function ExamplesNavbar() {
   );
 }
 
-export default ExamplesNavbar;
+export default TransparantNavbar;
