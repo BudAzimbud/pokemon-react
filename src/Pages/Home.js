@@ -21,13 +21,9 @@ function Home() {
                     {posts?.map((post, index) => {
                         return <CardImage
                             key={index}
-                            description={post.description}
-                            title={post.title}
-                            slug={post.slug}
-                            created={post.createdAt}
+                            {...post}
                         />
                     })}
-
                 </Row>
             </Col>
             <Col xl={3}>
