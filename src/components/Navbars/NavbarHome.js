@@ -80,10 +80,10 @@ function NavbarHome() {
                             target="_blank"
                             id="navbar-brand"
                         >
-                            Now Ui Kit
+                            Media Konsumen
                         </NavbarBrand>
                         <UncontrolledTooltip target="#navbar-brand">
-                            Designed by Invision. Coded by Creative Tim
+                            Designed by PT Sopwer Teknologi Indonesia
                         </UncontrolledTooltip>
                         <button
                             className="navbar-toggler navbar-toggler"
