@@ -37,19 +37,19 @@ function TransparentFooter() {
           </ul>
         </nav>
         <div className="copyright" id="copyright">
-          © {new Date().getFullYear()}, Designed by{" "}
+          © 2022, Designed by{" "}
           <a
-            href="https://www.invisionapp.com?ref=nukr-transparent-footer"
+            href="https://www.linkedin.com/company/sopwer/about/"
             target="_blank"
           >
-            Invision
+            PT Sopwer Teknologi Indonesia
           </a>
           . Coded by{" "}
           <a
-            href="https://www.creative-tim.com?ref=nukr-transparent-footer"
+            href="https://azimcopas.netlify.com"
             target="_blank"
           >
-            Creative Tim
+            Azim
           </a>
           .
         </div>
