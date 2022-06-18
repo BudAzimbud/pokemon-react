@@ -1,92 +1,201 @@
-# media-konsumen-frontend
+# [Now UI Kit React - Free Bootstrap 4, React, React Hooks and Reactstrap UI Kit](https://demos.creative-tim.com/now-ui-kit-react/#/index?ref=nukr-github-readme) ![version](https://img.shields.io/badge/version-1.5.0-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/now-ui-kit-react.svg?maxAge=2592000)](https://github.com/creativetimofficial/now-ui-kit-react/issues?q=is%3Aopen+is%3Aissue) [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/now-ui-kit-react.svg?maxAge=2592000)](https://github.com/creativetimofficial/now-ui-kit-react/issues?q=is%3Aissue+is%3Aclosed) [![Join the chat at https://gitter.im/NIT-dgp/General](https://badges.gitter.im/NIT-dgp/General.svg)](https://gitter.im/creative-tim-general/Lobby) [![Chat](https://img.shields.io/badge/chat-on%20discord-7289da.svg)](https://discord.gg/E4aHAQy)
+
+![Now UI Kit React](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/now-ui-kit-react/opt_nuk_react_thumbnail.jpg)
+
+Now UI Kit React is a free Bootstrap 4, React, React Hooks and Reactstrap UI Kit provided for free by Invision and Creative Tim. It is a beautiful cross-platform UI kit featuring over 50 elements and 3 templates.
+
+Now UI Kit is one of the most popular UI Kits online, provided in PSD and Sketch formats by Invision. We wanted to find a way for developers worldwide to benefit from using it. So, in collaboration with Invision, we are launching the React version for it!
+
+Create awesome, lifelike prototypes with InVision and Now so your users can experience and give feedback on your vision!
+
+To get the PSD and Sketch files, please visit [Invision](https://www.invisionapp.com/inside-design/design-resources/now/?ref=creativetim). We used 100 Icons from our friends from Nucleo Icons, check their [12.000 icons here](https://nucleoapp.com/?ref=1712).
+
+### React Hooks support
+
+Now UI Kit React is built on top of Bootstrap 4 using React and Reactstrap, so it fully supports React Hooks.
 
 
+### Bootstrap 4 support
 
-## Getting started
+Now UI Kit React is built on top of Bootstrap 4 using React, React Hooks, create-react-app and Reactstrap. This makes starting a new project very simple. It also provides benefits if you are already working on a Bootstrap 4, React or Reactstrap project; you can just import the Now UI Kit React style over it. Most of the elements have been redesigned; but if you are using an element we have not touched, it will fall back to the Bootstrap default.
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+### Examples
 
-## Add your files
+Now UI Kit React contains some pages already designed and implemented. Here is the list with the pages available. We are also working on more example pages, that you will be able to access no matter the version you download.
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
 
+* [Landing Page](https://demos.creative-tim.com/now-ui-kit-react/#/landing-page?ref=nukr-github-readme)
+* [Register](https://demos.creative-tim.com/now-ui-kit-react/#/register-page?ref=nukr-github-readme)
+* [Profile Page](https://demos.creative-tim.com/now-ui-kit-react/#/profile-page?ref=nukr-github-readme)
+
+Tutorial and components
+
+Once you download the archive, you will be able find a tutorial page inside it explaining how to start using it. You can also check the [documentation online](https://demos.creative-tim.com/now-ui-kit-react/#/documentation/introduction?ref=nukr-github-readme).
+
+
+## Table of Contents
+
+* [Versions](#versions)
+* [Demo](#demo)
+* [Quick Start](#quick-start)
+* [Documentation](#documentation)
+* [File Structure](#file-structure)
+* [Browser Support](#browser-support)
+* [Resources](#resources)
+* [Reporting Issues](#reporting-issues)
+* [Licensing](#licensing)
+* [Useful Links](#useful-links)
+
+## Versions
+
+| HTML | Angular | React | Vue |
+| --- | --- | --- | --- |
+| [![Now UI Kit HTML](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/now-ui-kit/opt_nuk_thumbnail.jpg)](https://www.creative-tim.com/product/now-ui-kit?ref=nukr-github-readme)  | [![Now UI Kit Angular](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/now-ui-kit-angular/opt_nuk_angular_thumbnail.jpg)](https://www.creative-tim.com/product/now-ui-kit-angular?ref=nukr-github-readme)  | [![Now UI Kit React](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/now-ui-kit-react/opt_nuk_react_thumbnail.jpg)](https://www.creative-tim.com/product/now-ui-kit-react?ref=nukr-github-readme)  | [![Vue Now UI Kit](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/vue-now-ui-kit/vue-now-ui-kit.jpg)](https://www.creative-tim.com/product/now-ui-kit-react?ref=nukr-github-readme)  
+
+| Login Page | Landing Page | Profile Page  |
+| --- | --- | ---  |
+| [![Login Page](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/now-ui-kit-react/login.png)](https://demos.creative-tim.com/now-ui-kit-react/#/login-page?ref=nukr-github-readme)  | [![Landing Page](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/now-ui-kit-react/landing.png)](https://demos.creative-tim.com/now-ui-kit-react/#/landing-page?ref=nukr-github-readme)  | [![Profile Page](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/now-ui-kit-react/profile.png)](https://demos.creative-tim.com/now-ui-kit-react/#/profile-page?ref=nukr-github-readme)  
+
+[View More](https://demos.creative-tim.com/now-ui-kit-react/#/index?ref=nukr-github-readme)
+
+## Quick start
+
+1.  Download the project's zip
+2.  Make sure you have node.js (<https://nodejs.org/en/?ref=creativetim>) installed
+3.  Type `npm install` in terminal/console in the source folder where `package.json` is located
+4.  You will find all the branding colors inside `src/assets/scss/now-ui-kit/_variables.scss`. You can change them with a `HEX` value or with other predefined variables.
+5.  Run in terminal `npm start`.
+
+## Documentation
+The documentation for the Now UI Kit React is hosted at our [website](https://demos.creative-tim.com/now-ui-kit-react/#/documentation/introduction?ref=nukr-github-readme).
+
+
+## File Structure
+
+Within the download you'll find the following directories and files:
 ```
-cd existing_repo
-git remote add origin https://gitlab.com/budazimbud/media-konsumen-frontend.git
-git branch -M main
-git push -uf origin main
+now-ui-kit-react
+.
+├── CHANGELOG.md
+├── LICENSE.md
+├── README.md
+├── jsconfig.json
+├── package.json
+├── public
+│   ├── index.html
+│   └── manifest.json
+└── src
+    ├── assets
+    │   ├── css
+    │   ├── demo
+    │   ├── fonts
+    │   ├── img
+    │   │   ├── flags
+    │   │   └── nucleo-logo.svg
+    │   └── scss
+    │       ├── now-ui-kit
+    │       │   ├── cards
+    │       │   ├── mixins
+    │       │   └── plugins
+    │       ├── react
+    │       │   ├── now-ui-kit
+    │       │   ├── plugins
+    │       │   └── react-differences.scss
+    │       └── now-ui-kit.scss
+    ├── components
+    │   ├── Footers
+    │   │   ├── DarkFooter.js
+    │   │   ├── DefaultFooter.js
+    │   │   └── TransparentFooter.js
+    │   ├── Headers
+    │   │   ├── IndexHeader.js
+    │   │   ├── LandingPageHeader.js
+    │   │   └── ProfilePageHeader.js
+    │   └── Navbars
+    │       ├── ExamplesNavbar.js
+    │       └── IndexNavbar.js
+    ├── index.js
+    └── views
+        ├── Index.js
+        ├── NucleoIcons.js
+        ├── examples
+        │   ├── LandingPage.js
+        │   ├── LoginPage.js
+        │   └── ProfilePage.js
+        └── index-sections
+            ├── BasicElements.js
+            ├── Carousel.js
+            ├── CompleteExamples.js
+            ├── Download.js
+            ├── Examples.js
+            ├── Images.js
+            ├── Javascript.js
+            ├── Navbars.js
+            ├── Notifications.js
+            ├── NucleoIcons.js
+            ├── Pagination.js
+            ├── SignUp.js
+            ├── Tabs.js
+            └── Typography.js
 ```
 
-## Integrate with your tools
+## Browser Support
 
-- [ ] [Set up project integrations](https://gitlab.com/budazimbud/media-konsumen-frontend/-/settings/integrations)
+At present, we officially aim to support the last two versions of the following browsers:
 
-## Collaborate with your team
+<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/chrome-logo.png?raw=true" width="64" height="64"> <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/firefox-logo.png" width="64" height="64"> <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/edge-logo.png" width="64" height="64"> <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/safari-logo.png" width="64" height="64"> <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/opera-logo.png" width="64" height="64">
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Automatically merge when pipeline succeeds](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
 
-## Test and Deploy
+## Resources
+- Demo: <http://demos.creative-tim.com/now-ui-kit-react/#/index?ref=nukr-github-readme>
+- Download Page: <https://www.creative-tim.com/product/now-ui-kit-react?ref=nukr-github-readme>
+- Documentation: <https://demos.creative-tim.com/now-ui-kit-react/#/documentation/introduction?ref=nukr-github-readme>
+- License Agreement: <https://www.creative-tim.com/license?ref=nukr-github-readme>
+- Support: <https://www.creative-tim.com/contact-us?ref=nukr-github-readme>
+- Issues: [Github Issues Page](https://github.com/creativetimofficial/now-ui-kit-react/issues?ref=creativetim)
 
-Use the built-in continuous integration in GitLab.
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+**Dashboards:**
 
-***
+| HTML | React | Angular |
+| --- | --- | ---  |
+| [![Now UI Dashboard  HTML](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/now-ui-dashboard/opt_nud_thumbnail.jpg)](https://www.creative-tim.com/product/now-ui-dashboard?ref=nukr-github-readme) | [![Now UI Dashboard  React](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/now-ui-dashboard-react/opt_nud_react_thumbnail.jpg)](https://www.creative-tim.com/product/now-ui-dashboard-react?ref=nukr-github-readme) | [![ Now UI Dashboard Angular](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/now-ui-dashboard-angular/opt_nud_angular_thumbnail.jpg)](https://www.creative-tim.com/product/now-ui-dashboard-angular?ref=nukr-github-readme)
 
-# Editing this README
+## Reporting Issues
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
+We use GitHub Issues as the official bug tracker for the Now UI Kit React. Here are some advices for our users that want to report an issue:
 
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+1. Make sure that you are using the latest version of the Now UI Kit React. Check the CHANGELOG from your dashboard on our [website](https://www.creative-tim.com/?ref=nukr-github-readme).
+2. Providing us reproducible steps for the issue will shorten the time it takes for it to be fixed.
+3. Some issues may be browser specific, so specifying in what browser you encountered the issue might help.
 
-## Name
-Choose a self-explaining name for your project.
+## Licensing
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+- Copyright 2021 Creative Tim (https://www.creative-tim.com/?ref=nukr-github-readme)
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+[CHANGELOG]: ./CHANGELOG.md
+[LICENSE]: ./LICENSE.md
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+## Useful Links
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+- [Tutorials](https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w?ref=creativetim)
+- [Affiliate Program](https://www.creative-tim.com/affiliates/new?ref=nukr-github-readme) (earn money)
+- [Blog Creative Tim](http://blog.creative-tim.com/?ref=nukr-github-readme)
+- [Free Products](https://www.creative-tim.com/bootstrap-themes/free?ref=nukr-github-readme) from Creative Tim
+- [Premium Products](https://www.creative-tim.com/bootstrap-themes/premium?ref=nukr-github-readme) from Creative Tim
+- [React Products](https://www.creative-tim.com/bootstrap-themes/react-themes?ref=nukr-github-readme) from Creative Tim
+- [Angular Products](https://www.creative-tim.com/bootstrap-themes/angular-themes?ref=nukr-github-readme) from Creative Tim
+- [VueJS Products](https://www.creative-tim.com/bootstrap-themes/vuejs-themes?ref=nukr-github-readme) from Creative Tim
+- [More products](https://www.creative-tim.com/bootstrap-themes?ref=nukr-github-readme) from Creative Tim
+- Check our Bundles [here](https://www.creative-tim.com/bundles?ref=nukr-github-readme)
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+### Social Media
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+Twitter: <https://twitter.com/CreativeTim?ref=creativetim>
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+Facebook: <https://www.facebook.com/CreativeTim?ref=creativetim>
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+Dribbble: <https://dribbble.com/creativetim?ref=creativetim>
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+Instagram: <https://www.instagram.com/CreativeTimOfficial?ref=creativetim>
