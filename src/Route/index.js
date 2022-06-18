@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom'
 import routes from './route'
 import Layout from '../Layout'
 
@@ -18,6 +18,7 @@ function index() {
                             <Route path={route.path} key={index} render={(props) => { return route.element }} />
                         )
                     })}
+                    <Redirect from='*' to={"/"} />
                 </Switch>
             </BrowserRouter>
         </div>

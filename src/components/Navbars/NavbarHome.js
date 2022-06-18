@@ -162,13 +162,14 @@ function NavbarHome() {
                             </NavItem>
 
                             <NavItem>
-                                <NavLink
-                                    href="/login"
-                                    id="login-tooltip"
-                                >
-                                    <i className="fa-solid fa-user"></i>
-                                    <p className="d-lg-none d-xl-none">Masuk</p>
-                                </NavLink>
+                                <Link to={"/login"}>
+                                    <NavLink
+                                        id="login-tooltip"
+                                    >
+                                        <i className="fa-solid fa-user"></i>
+                                        <p className="d-lg-none d-xl-none">Masuk</p>
+                                    </NavLink>
+                                </Link>
                                 <UncontrolledTooltip target="#login-tooltip">
                                     Masuk
                                 </UncontrolledTooltip>

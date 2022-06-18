@@ -10,7 +10,9 @@
 
 # production
 /build
+Documentation
 
+.github
 # misc
 .DS_Store
 .env
