@@ -107,7 +107,9 @@ function NavbarHome() {
 
                         <Nav navbar>
                             <NavItem>
-                                <Form data-background-color="">
+                                <Form data-background-color="" onSubmit={(event) => {
+                                    event.preventDefault()
+                                }}>
                                     <InputGroup>
                                         <InputGroupAddon addonType="prepend">
                                             <InputGroupText>
