@@ -45,28 +45,30 @@ function DetailNew() {
     }, [slug])
 
     return (
-        <div className="py-4" >
-            <div className="wrapper mt-3">
-                <LandingPageHeader title={data.title} />
-                <div className="section section-about-us">
-                    <Container>
-                        <Row>
-                            <Col className="ml-auto mr-auto text-center" md="8">
-                                <h2 className="title">{data.description}</h2>
-                                <div className="description">
-                                    <h5>{data.description}</h5>
-                                    <div style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>
-                                        <p>
-                                            Pada <Moment format="D MMM YYYY"   >{data.createdAt}</Moment>
-                                        </p>
-                                        <p>Oleh {"ramdani"}</p>
-                                    </div>
-                                </div>
-                            </Col>
-                        </Row>
-                        <div className="separator separator-primary"></div>
-                        <div className="section-story-overview">
-                            {/* <Row>
+        <Row>
+            <Col xl={9}>
+                <div className="py-4" >
+                    <div className=" mt-3">
+                        <LandingPageHeader title={data.title} />
+                        <div className="section section-about-us">
+                            <Container>
+                                <Row>
+                                    <Col className="ml-auto mr-auto text-center" md="8">
+                                        <h2 className="title">{data.description}</h2>
+                                        <div className="description">
+                                            <h5>{data.description}</h5>
+                                            <div style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>
+                                                <p>
+                                                    Pada <Moment format="D MMM YYYY"   >{data.createdAt}</Moment>
+                                                </p>
+                                                <p>Oleh {"ramdani"}</p>
+                                            </div>
+                                        </div>
+                                    </Col>
+                                </Row>
+                                <div className="separator separator-primary"></div>
+                                <div className="section-story-overview">
+                                    {/* <Row>
                                 <Col md="6">
                                     <div
                                         className="image-container image-left"
@@ -134,80 +136,85 @@ function DetailNew() {
                                     </p>
                                 </Col>
                             </Row> */}
+                                </div>
+                            </Container>
                         </div>
-                    </Container>
-                </div>
 
-                <div className="section section-contact-us text-center">
-                    <Container>
-                        <h2 className="title">Want to work with us?</h2>
-                        <p className="description">Your project is very important to us.</p>
-                        <Row>
-                            <Col className="text-center ml-auto mr-auto" lg="6" md="8">
-                                <InputGroup
-                                    className={
-                                        "input-lg" + (firstFocus ? " input-group-focus" : "")
-                                    }
-                                >
-                                    <InputGroupAddon addonType="prepend">
-                                        <InputGroupText>
-                                            <i className="now-ui-icons users_circle-08"></i>
-                                        </InputGroupText>
-                                    </InputGroupAddon>
-                                    <Input
-                                        placeholder="First Name..."
-                                        type="text"
-                                        onFocus={() => setFirstFocus(true)}
-                                        onBlur={() => setFirstFocus(false)}
-                                    ></Input>
-                                </InputGroup>
-                                <InputGroup
-                                    className={
-                                        "input-lg" + (lastFocus ? " input-group-focus" : "")
-                                    }
-                                >
-                                    <InputGroupAddon addonType="prepend">
-                                        <InputGroupText>
-                                            <i className="now-ui-icons ui-1_email-85"></i>
-                                        </InputGroupText>
-                                    </InputGroupAddon>
-                                    <Input
-                                        placeholder="Email..."
-                                        type="text"
-                                        onFocus={() => setLastFocus(true)}
-                                        onBlur={() => setLastFocus(false)}
-                                    ></Input>
-                                </InputGroup>
-                                <div className="textarea-container">
-                                    <Input
-                                        cols="80"
-                                        name="name"
-                                        placeholder="Type a message..."
-                                        rows="4"
-                                        type="textarea"
-                                    ></Input>
-                                </div>
-                                <div className="send-button">
-                                    <Button
-                                        block
-                                        className="btn-round"
-                                        color="info"
-                                        href="#pablo"
-                                        onClick={(e) => {
-                                            history.push("/login")
-                                            e.preventDefault()
-                                        }}
-                                        size="lg"
-                                    >
-                                        Send Message
-                                    </Button>
-                                </div>
-                            </Col>
-                        </Row>
-                    </Container>
-                </div>
-            </div>
-        </div>
+                        <div className="section section-contact-us text-center">
+                            <Container>
+                                <h2 className="title">Want to work with us?</h2>
+                                <p className="description">Your project is very important to us.</p>
+                                <Row>
+                                    <Col className="text-center ml-auto mr-auto" lg="6" md="8">
+                                        <InputGroup
+                                            className={
+                                                "input-lg" + (firstFocus ? " input-group-focus" : "")
+                                            }
+                                        >
+                                            <InputGroupAddon addonType="prepend">
+                                                <InputGroupText>
+                                                    <i className="now-ui-icons users_circle-08"></i>
+                                                </InputGroupText>
+                                            </InputGroupAddon>
+                                            <Input
+                                                placeholder="First Name..."
+                                                type="text"
+                                                onFocus={() => setFirstFocus(true)}
+                                                onBlur={() => setFirstFocus(false)}
+                                            ></Input>
+                                        </InputGroup>
+                                        <InputGroup
+                                            className={
+                                                "input-lg" + (lastFocus ? " input-group-focus" : "")
+                                            }
+                                        >
+                                            <InputGroupAddon addonType="prepend">
+                                                <InputGroupText>
+                                                    <i className="now-ui-icons ui-1_email-85"></i>
+                                                </InputGroupText>
+                                            </InputGroupAddon>
+                                            <Input
+                                                placeholder="Email..."
+                                                type="text"
+                                                onFocus={() => setLastFocus(true)}
+                                                onBlur={() => setLastFocus(false)}
+                                            ></Input>
+                                        </InputGroup>
+                                        <div className="textarea-container">
+                                            <Input
+                                                cols="80"
+                                                name="name"
+                                                placeholder="Type a message..."
+                                                rows="4"
+                                                type="textarea"
+                                            ></Input>
+                                        </div>
+                                        <div className="send-button">
+                                            <Button
+                                                block
+                                                className="btn-round"
+                                                color="info"
+                                                href="#pablo"
+                                                onClick={(e) => {
+                                                    history.push("/login")
+                                                    e.preventDefault()
+                                                }}
+                                                size="lg"
+                                            >
+                                                Send Message
+                                            </Button>
+                                        </div>
+                                    </Col>
+                                </Row>
+                            </Container>
+                        </div>
+                    </div>
+                </div></Col>
+            <Col >
+            </Col>
+        </Row>
+
+
     );
 }
 
