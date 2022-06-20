@@ -38,7 +38,7 @@ function DetailNew() {
     }, []);
 
     React.useEffect(() => {
-        axios.get(`https://katakonsumen-pb2c4lmpla-et.a.run.app/public/posts/${slug}`).then((res) => {
+        axios.get(`${process.env.REACT_APP_URL_BACKEND}/public/posts/${slug}`).then((res) => {
             console.log(res.data)
             setData(res.data)
         })

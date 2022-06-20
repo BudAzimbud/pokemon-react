@@ -9,7 +9,7 @@ function Home() {
 
 
     const getPosts = () => {
-        axios.get(`https://katakonsumen-pb2c4lmpla-et.a.run.app/public/posts`).then((res) => {
+        axios.get(`${process.env.REACT_APP_URL_BACKEND}/public/posts`).then((res) => {
             console.log(res.data)
             setPosts(res.data)
         })
