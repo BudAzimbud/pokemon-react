@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { AiOutlineSearch } from 'react-icons/ai'
+import { AiOutlineSearch, AiOutlineUser } from 'react-icons/ai'
 // reactstrap components
 import {
     Collapse,
@@ -106,11 +106,12 @@ function NavbarHome() {
                         navbar
                     >
 
-                        <Nav navbar>
+                        <Nav navbar style={{ fontSize: '18px' }}>
                             <NavItem>
-                                <Form data-background-color="" onSubmit={(event) => {
-                                    event.preventDefault()
-                                }}>
+                                <Form data-background-color=""
+                                    onSubmit={(event) => {
+                                        event.preventDefault()
+                                    }}>
                                     <InputGroup>
                                         <InputGroupAddon addonType="prepend">
                                             <InputGroupText>
@@ -122,17 +123,17 @@ function NavbarHome() {
                                 </Form>
                             </NavItem>
                             <NavItem>
-                                <NavLink to="/index" tag={Link}>
+                                {/* <NavLink to="/index" tag={Link}>
                                     KIRIM SURAT
-                                </NavLink>
+                                </NavLink> */}
                             </NavItem>
                             <NavItem>
-                                <NavLink to="/index" tag={Link}>
+                                {/* <NavLink to="/index" tag={Link}>
                                     SURAT PEMBACA
-                                </NavLink>
+                                </NavLink> */}
                             </NavItem>
                             <NavItem>
-                                <NavLink to="/index" tag={Link}>
+                                <NavLink to="/index" tag={Link} onClick={(e) => e.preventDefault()}>
                                     TANGGAPAN
                                 </NavLink>
                             </NavItem>
@@ -157,17 +158,48 @@ function NavbarHome() {
                                 </NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink to="/index" tag={Link}>
-                                    TENTANG KAMI
-                                </NavLink>
+                                <UncontrolledDropdown nav>
+                                    <DropdownToggle
+                                        aria-haspopup={true}
+                                        caret
+                                        color="default"
+                                        data-toggle="dropdown"
+                                        href="#pablo"
+                                        id="navbarDropdownMenuLink"
+                                        nav
+                                        onClick={e => e.preventDefault()}
+                                    >
+                                        Topik Lainnya
+                                    </DropdownToggle>
+                                    <DropdownMenu aria-labelledby="navbarDropdownMenuLink">
+                                        <DropdownItem
+                                            href="#pablo"
+                                            onClick={e => e.preventDefault()}
+                                        >
+                                            Action
+                                        </DropdownItem>
+                                        <DropdownItem
+                                            href="#pablo"
+                                            onClick={e => e.preventDefault()}
+                                        >
+                                            Another action
+                                        </DropdownItem>
+                                        <DropdownItem
+                                            href="#pablo"
+                                            onClick={e => e.preventDefault()}
+                                        >
+                                            Something else here
+                                        </DropdownItem>
+                                    </DropdownMenu>
+                                </UncontrolledDropdown>
                             </NavItem>
 
-                            <NavItem>
+                            <NavItem >
                                 <Link to={"/login"}>
                                     <NavLink
                                         id="login-tooltip"
                                     >
-                                        <i className="fa-solid fa-user"></i>
+                                        <AiOutlineUser />
                                         <p className="d-lg-none d-xl-none">Masuk</p>
                                     </NavLink>
                                 </Link>
