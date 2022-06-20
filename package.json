@@ -16,6 +16,7 @@
     "perfect-scrollbar": "^1.5.5",
     "react": "17.0.2",
     "react-bootstrap-switch": "15.5.3",
+    "react-content-loader": "^6.2.0",
     "react-datetime": "3.0.4",
     "react-dom": "17.0.2",
     "react-icons": "^4.4.0",

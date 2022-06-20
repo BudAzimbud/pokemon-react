@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 // reactstrap components
 import {
@@ -14,12 +14,17 @@ import {
 
 // core components
 import LandingPageHeader from "components/Headers/LandingPageHeader.js";
-import { useHistory } from "react-router";
+import { useHistory, useParams } from "react-router";
+import axios from "axios";
+import Moment from "react-moment";
 
 function DetailNew() {
     const [firstFocus, setFirstFocus] = React.useState(false);
     const [lastFocus, setLastFocus] = React.useState(false);
+    const { slug } = useParams()
     const history = useHistory()
+    const [data, setData] = useState({})
+
     React.useEffect(() => {
         document.body.classList.add("landing-page");
         document.body.classList.add("sidebar-collapse");
@@ -31,27 +36,37 @@ function DetailNew() {
             document.body.classList.remove("sidebar-collapse");
         };
     }, []);
+
+    React.useEffect(() => {
+        axios.get(`https://katakonsumen-pb2c4lmpla-et.a.run.app/public/posts/${slug}`).then((res) => {
+            console.log(res.data)
+            setData(res.data)
+        })
+    }, [slug])
+
     return (
         <div className="py-4" >
             <div className="wrapper mt-3">
-                <LandingPageHeader />
+                <LandingPageHeader title={data.title} />
                 <div className="section section-about-us">
                     <Container>
                         <Row>
                             <Col className="ml-auto mr-auto text-center" md="8">
-                                <h2 className="title">Who we are?</h2>
-                                <h5 className="description">
-                                    According to the National Oceanic and Atmospheric
-                                    Administration, Ted, Scambos, NSIDClead scentist, puts the
-                                    potentially record low maximum sea ice extent tihs year down
-                                    to low ice extent in the Pacific and a late drop in ice extent
-                                    in the Barents Sea.
-                                </h5>
+                                <h2 className="title">{data.description}</h2>
+                                <div className="description">
+                                    <h5>{data.description}</h5>
+                                    <div style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>
+                                        <p>
+                                            Pada <Moment format="D MMM YYYY"   >{data.createdAt}</Moment>
+                                        </p>
+                                        <p>Oleh {"ramdani"}</p>
+                                    </div>
+                                </div>
                             </Col>
                         </Row>
                         <div className="separator separator-primary"></div>
                         <div className="section-story-overview">
-                            <Row>
+                            {/* <Row>
                                 <Col md="6">
                                     <div
                                         className="image-container image-left"
@@ -118,7 +133,7 @@ function DetailNew() {
                                         ice.
                                     </p>
                                 </Col>
-                            </Row>
+                            </Row> */}
                         </div>
                     </Container>
                 </div>
