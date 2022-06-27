@@ -57,9 +57,10 @@ function DetailNew() {
                                         <h2 className="title">{data.description}</h2>
                                         <div className="description">
                                             <h5>{data.description}</h5>
-                                            <div style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>
-                                                <p>
+                                            <div className="d-flex justify-content-center ">
+                                                <p >
                                                     Pada <Moment format="D MMM YYYY"   >{data.createdAt}</Moment>
+                                                    &nbsp;
                                                 </p>
                                                 <p>Oleh {"ramdani"}</p>
                                             </div>
