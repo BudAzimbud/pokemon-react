@@ -30,10 +30,10 @@ function CardImage(props) {
                                 )
                             })
                         }
-                        <CardTitle tag="h5" className='fw-bold'  >
+                        <CardTitle tag="h4" className='fw-bold'  >
                             {props.title}
                         </CardTitle>
-                        <CardText  >
+                        <CardText >
                             {props.description}
                         </CardText>
                         <CardText className='d-flex justify-content-between  font-footer' >
