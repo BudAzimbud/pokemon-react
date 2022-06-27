@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { Col, Card, CardImg, CardText, CardTitle, CardBody, Badge } from 'reactstrap'
 import Moment from 'react-moment';
 import { BsPatchCheckFill, BsChat } from 'react-icons/bs'
+import './CardImage.css'
 function CardImage(props) {
 
     const colorBudge = ["primary", "info", "success", "danger", "warning", "neutral", "default"]
@@ -10,7 +11,7 @@ function CardImage(props) {
     const styleVerified = props.author.isVerified ? { color: 'blue' } : { color: 'grey' }
 
     return (
-        <Col xl={6} sm={12} md={6} style={{ width: '40rem' }}>
+        <Col xl={6} sm={12} md={6} className="wrapper-card">
             <Link to={"berita/" + props.slug} >
                 <Card>
                     <CardImg
@@ -23,28 +24,28 @@ function CardImage(props) {
                         {
                             props.tags.map((tag, index) => {
                                 return (
-                                    <Badge key={index} color={colorBudge[Math.floor(Math.random() * colorBudge.length)]} href="#pablo" onClick={e => e.preventDefault()}>
+                                    <Badge key={"index"} className="mr-1" color={colorBudge[Math.floor(Math.random() * colorBudge.length)]} href="#pablo" onClick={e => e.preventDefault()}>
                                         {tag}
                                     </Badge>
                                 )
                             })
                         }
-                        <CardTitle tag="h5" style={{ fontWeight: 'bold' }} >
+                        <CardTitle tag="h5" className='fw-bold'  >
                             {props.title}
                         </CardTitle>
-                        <CardText>
+                        <CardText  >
                             {props.description}
                         </CardText>
-                        <CardText style={{ display: 'flex', fontSize: "25px", justifyContent: "space-between", }} >
-                            <small className="text-muted">
+                        <CardText className='d-flex justify-content-between  font-footer' >
+                            <p>
                                 updated <Moment toNow>{props.created}</Moment>
-                            </small>
-                            <small className="text-muted" style={{ alignItems: 'center' }}>
+                            </p>
+                            <p className=" align-items-center" >
                                 {"20K"} {<BsChat />}
-                            </small>
-                            <small className="text-muted" style={{ alignItems: 'center' }}>
+                            </p>
+                            <p className="align-items-center" >
                                 {props.author.fullName} {<BsPatchCheckFill style={styleVerified} />}
-                            </small>
+                            </p>
                         </CardText>
                     </CardBody>
                 </Card>
