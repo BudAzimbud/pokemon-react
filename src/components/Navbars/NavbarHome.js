@@ -123,16 +123,16 @@ function NavbarHome() {
                                 </Form>
                             </NavItem>
                             <NavItem>
-                                {/* <NavLink to="/index" tag={Link}>
+                                <NavLink to="/index" tag={Link}>
                                     KIRIM SURAT
-                                </NavLink> */}
+                                </NavLink>
                             </NavItem>
                             <NavItem>
-                                {/* <NavLink to="/index" tag={Link}>
+                                <NavLink to="/index" tag={Link}>
                                     SURAT PEMBACA
-                                </NavLink> */}
+                                </NavLink>
                             </NavItem>
-                            <NavItem>
+                            {/* <NavItem>
                                 <NavLink to="/index" tag={Link} onClick={(e) => e.preventDefault()}>
                                     TANGGAPAN
                                 </NavLink>
@@ -156,8 +156,8 @@ function NavbarHome() {
                                 <NavLink to="/index" tag={Link}>
                                     REVIEW
                                 </NavLink>
-                            </NavItem>
-                            <NavItem>
+                            </NavItem> */}
+                            {/* <NavItem>
                                 <UncontrolledDropdown nav>
                                     <DropdownToggle
                                         aria-haspopup={true}
@@ -192,7 +192,7 @@ function NavbarHome() {
                                         </DropdownItem>
                                     </DropdownMenu>
                                 </UncontrolledDropdown>
-                            </NavItem>
+                            </NavItem> */}
 
                             <NavItem >
                                 <Link to={"/login"}>
