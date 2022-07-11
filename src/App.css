@@ -1,11 +1,22 @@
 *{
-    font-family: Open Sans , sans-serif ;
+    font-family: Quicksand,sans-serif ;
 }
 
 .wrapper-children{
     padding: 0 100px;
 }
 
+.text-purple{
+  color:#7367f0
+}
+.blogwrapper{
+  color:#414b54;
+  font-weight: 400;
+  line-height: 190%;
+  font-family: Quicksand,sans-serif;
+  font-size: 17px;
+  text-align: justify;
+}
 /* query on max tablet */
 @media only screen and (max-width: 900px) {
     .wrapper-children {

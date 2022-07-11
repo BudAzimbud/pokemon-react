@@ -2,27 +2,24 @@ import React, { useState } from "react";
 
 // reactstrap components
 import {
-    Button,
-    Input,
-    InputGroupAddon,
-    InputGroupText,
-    InputGroup,
     Container,
     Row,
     Col,
+    Badge,
 } from "reactstrap";
 
 // core components
 import LandingPageHeader from "components/Headers/LandingPageHeader.js";
-import { useHistory, useParams } from "react-router";
+import {  useParams } from "react-router";
 import axios from "axios";
 import Moment from "react-moment";
-
+import {MdDateRange} from 'react-icons/md'
+import {AiOutlineUser} from 'react-icons/ai'
+import { colorText } from "helper/color";
+import '../App.css'
 function DetailNew() {
-    const [firstFocus, setFirstFocus] = React.useState(false);
-    const [lastFocus, setLastFocus] = React.useState(false);
+  
     const { slug } = useParams()
-    const history = useHistory()
     const [data, setData] = useState({})
 
     React.useEffect(() => {
@@ -39,9 +36,9 @@ function DetailNew() {
 
     React.useEffect(() => {
         axios.get(`${process.env.REACT_APP_URL_BACKEND}/public/posts/${slug}`).then((res) => {
-            console.log(res.data)
             setData(res.data)
         })
+        document.title="KataKonsumen - "+slug
     }, [slug])
 
     return (
@@ -50,100 +47,33 @@ function DetailNew() {
                 <div className="py-4" >
                     <div className=" mt-3">
                         <LandingPageHeader title={data.title} />
-                        <div className="section section-about-us">
-                            <Container>
-                                <Row>
-                                    <Col className="ml-auto mr-auto text-center" md="8">
-                                        <h2 className="title">{data.description}</h2>
-                                        <div className="description">
-                                            <h5>{data.description}</h5>
-                                            <div className="d-flex justify-content-center ">
-                                                <p >
-                                                    Pada <Moment format="D MMM YYYY"   >{data.createdAt}</Moment>
-                                                    &nbsp;
-                                                </p>
-                                                <p>Oleh {"ramdani"}</p>
-                                            </div>
-                                        </div>
-                                    </Col>
+                        <h2 className="title">{data.title}</h2>
+                            <div className="d-flex gap-4 s  text-secondary small">
+                                <p className="d-flex justify0-content-center">
+                                <MdDateRange size={20}/><span> <Moment format="D MMM YYYY">{data.createdAt}</Moment></span>
+                                </p>
+                                <p className="ml-4 d-flex justify0-content-center">
+                                <AiOutlineUser size={20}/><span> {data?.author?.fullName}</span>
+                                </p>
+                                {
+                                    data?.tags?.map((tag, index) => {
+                                        return (
+                                            <p className="ml-4 d-flex justify-content-center">
+                                                <span className="fw-bold">{tag.toUpperCase()}</span>
+                                            </p>
+                                        )
+                                    })
+                                }
+                               
+                              
+                            </div>
+                          
+                            <div className="text-secondary h5">{data.description}</div>
+                            <div className="section-story-overview">
+                                <Row className="container">
+                                    <div className="blogwrapper" dangerouslySetInnerHTML={{ __html: data.content }} />
                                 </Row>
-                                <div className="separator separator-primary"></div>
-                                <div className="section-story-overview">
-                                    <Row className="container">
-                                        <div dangerouslySetInnerHTML={{ __html: data.content }} />
-                                    </Row>
-                                </div>
-                            </Container>
-                        </div>
-
-                        <div className="section section-contact-us text-center">
-                            <Container>
-                                <h2 className="title">Want to work with us?</h2>
-                                <p className="description">Your project is very important to us.</p>
-                                <Row>
-                                    <Col className="text-center ml-auto mr-auto" lg="6" md="8">
-                                        <InputGroup
-                                            className={
-                                                "input-lg" + (firstFocus ? " input-group-focus" : "")
-                                            }
-                                        >
-                                            <InputGroupAddon addonType="prepend">
-                                                <InputGroupText>
-                                                    <i className="now-ui-icons users_circle-08"></i>
-                                                </InputGroupText>
-                                            </InputGroupAddon>
-                                            <Input
-                                                placeholder="First Name..."
-                                                type="text"
-                                                onFocus={() => setFirstFocus(true)}
-                                                onBlur={() => setFirstFocus(false)}
-                                            ></Input>
-                                        </InputGroup>
-                                        <InputGroup
-                                            className={
-                                                "input-lg" + (lastFocus ? " input-group-focus" : "")
-                                            }
-                                        >
-                                            <InputGroupAddon addonType="prepend">
-                                                <InputGroupText>
-                                                    <i className="now-ui-icons ui-1_email-85"></i>
-                                                </InputGroupText>
-                                            </InputGroupAddon>
-                                            <Input
-                                                placeholder="Email..."
-                                                type="text"
-                                                onFocus={() => setLastFocus(true)}
-                                                onBlur={() => setLastFocus(false)}
-                                            ></Input>
-                                        </InputGroup>
-                                        <div className="textarea-container">
-                                            <Input
-                                                cols="80"
-                                                name="name"
-                                                placeholder="Type a message..."
-                                                rows="4"
-                                                type="textarea"
-                                            ></Input>
-                                        </div>
-                                        <div className="send-button">
-                                            <Button
-                                                block
-                                                className="btn-round"
-                                                color="info"
-                                                href="#pablo"
-                                                onClick={(e) => {
-                                                    history.push("/login")
-                                                    e.preventDefault()
-                                                }}
-                                                size="lg"
-                                            >
-                                                Send Message
-                                            </Button>
-                                        </div>
-                                    </Col>
-                                </Row>
-                            </Container>
-                        </div>
+                            </div>
                     </div>
                 </div></Col>
             <Col >
