@@ -16,10 +16,18 @@
   font-family: Quicksand,sans-serif;
   font-size: 17px;
   text-align: justify;
+  padding: 0 2%;
+}
+
+.cursor-hand{
+  cursor: pointer;
 }
 /* query on max tablet */
 @media only screen and (max-width: 900px) {
     .wrapper-children {
       padding: 0;
+    }
+    .blogwrapper{
+      padding: 0 3.9%;
     }
   }

@@ -44,39 +44,38 @@ function DetailNew() {
     return (
         <Row>
             <Col xl={9}>
-                <div className="py-4" >
-                    <div className=" mt-3">
-                        <LandingPageHeader title={data.title} />
-                        <h2 className="title">{data.title}</h2>
-                            <div className="d-flex gap-4 s  text-secondary small">
-                                <p className="d-flex justify0-content-center">
-                                <MdDateRange size={20}/><span> <Moment format="D MMM YYYY">{data.createdAt}</Moment></span>
+                <div className="py-1" >
+                <LandingPageHeader title={data.title} />
+                <div className="d-flex gap-4  text-secondary cursor-hand small mt-3">
+                    <p className="d-flex justify-content-center ">
+                    <MdDateRange size={20}/>&nbsp;<span> <Moment format="D MMM YYYY">{data.createdAt}</Moment></span>
+                    </p>
+                    <p className="ml-4 d-flex justify-content-center">
+                    <FaUser size={17}/>&nbsp;<span>{data?.author?.fullName}</span>
+                    </p>
+                    {
+                        data?.tags?.map((tag, index) => {
+                            return (
+                                <p className="ml-4 d-flex justify-content-center">
+                                    <span className="fw-bold">{tag.toUpperCase()}</span>
                                 </p>
-                                <p className="ml-4 d-flex justify0-content-center">
-                                <FaUser size={20}/><span> {data?.author?.fullName}</span>
-                                </p>
-                                {
-                                    data?.tags?.map((tag, index) => {
-                                        return (
-                                            <p className="ml-4 d-flex justify-content-center">
-                                                <span className="fw-bold">{tag.toUpperCase()}</span>
-                                            </p>
-                                        )
-                                    })
-                                }
-                               
-                              
-                            </div>
+                            )
+                        })
+                    }
+                    
+                    
+                </div>
                           
-                            <div className="text-secondary h5">{data.description}</div>
-                            <div className="section-story-overview">
-                                <Row className="container">
-                                    <div className="blogwrapper" dangerouslySetInnerHTML={{ __html: data.content }} />
-                                </Row>
-                            </div>
-                    </div>
+            <h2 className="title py-0">{data.title}</h2>
+                <div className="text-secondary h5 ">{data.description}</div>
+                
+                <div className="section-story-overview">
+                    <Row className="">
+                        <div className="blogwrapper" dangerouslySetInnerHTML={{ __html: data.content }} />
+                    </Row>
+                </div>
                 </div></Col>
-            <Col >
+            <Col sm={12} >
             </Col>
         </Row>
 
