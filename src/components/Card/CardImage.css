@@ -1,8 +1,17 @@
+
+.font-monserrat{
+    font-family:  Montserrat,Helvetica,Arial,serif;
+}
+
 .font-footer{
     font-size: 12px;
     color: grey;
 }
 
 .wrapper-card{
-    width: 40rem;
+    width: 50rem;
 }
+
+.text-title{
+}
+

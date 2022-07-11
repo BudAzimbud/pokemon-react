@@ -44,7 +44,6 @@ function Home() {
                 </Row>
             </Col>
             <Col xl={3}>
-                hallo
             </Col>
         </Row>
 
