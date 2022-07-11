@@ -14,7 +14,7 @@ import {  useParams } from "react-router";
 import axios from "axios";
 import Moment from "react-moment";
 import {MdDateRange} from 'react-icons/md'
-import {AiOutlineUser} from 'react-icons/ai'
+import {FaUser} from 'react-icons/fa'
 import { colorText } from "helper/color";
 import '../App.css'
 function DetailNew() {
@@ -53,7 +53,7 @@ function DetailNew() {
                                 <MdDateRange size={20}/><span> <Moment format="D MMM YYYY">{data.createdAt}</Moment></span>
                                 </p>
                                 <p className="ml-4 d-flex justify0-content-center">
-                                <AiOutlineUser size={20}/><span> {data?.author?.fullName}</span>
+                                <FaUser size={20}/><span> {data?.author?.fullName}</span>
                                 </p>
                                 {
                                     data?.tags?.map((tag, index) => {
