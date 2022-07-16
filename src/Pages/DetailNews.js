@@ -43,7 +43,7 @@ function DetailNew() {
             <Col xl={9}>
                 <div className="py-1" >
                 <LandingPageHeader title={data.title} />
-                <div className="d-flex px-4 gap-4  text-secondary cursor-hand small mt-3">
+                <div className="d-flex  gap-2  text-secondary cursor-hand small mt-3">
                     <p className="d-flex  justify-content-center ">
                     <MdDateRange size={20}/>&nbsp;<span> <Moment format="D MMM YYYY">{data.createdAt}</Moment></span>
                     </p>
