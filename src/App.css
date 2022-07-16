@@ -16,7 +16,6 @@
   font-family: Quicksand,sans-serif;
   font-size: 17px;
   text-align: justify;
-  padding: 0 2%;
 }
 
 .cursor-hand{
@@ -28,7 +27,5 @@
     .wrapper-children {
       padding: 0;
     }
-    .blogwrapper{
-      padding: 0 3.9%;
-    }
+  
   }

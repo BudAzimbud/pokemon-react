@@ -24,7 +24,7 @@ function Home() {
         <Row>
             <Col xl={9}>
 
-                (<Row className="gap-5 p-4 mt-3">
+                <Row className="gap-5 p-4 mt-3">
                     {
                         posts.length > 0 ?
                             posts?.map((post, index) => {

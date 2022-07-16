@@ -2,10 +2,8 @@ import React, { useState } from "react";
 
 // reactstrap components
 import {
-    Container,
     Row,
     Col,
-    Badge,
 } from "reactstrap";
 
 // core components
@@ -15,7 +13,6 @@ import axios from "axios";
 import Moment from "react-moment";
 import {MdDateRange} from 'react-icons/md'
 import {FaUser} from 'react-icons/fa'
-import { colorText } from "helper/color";
 import '../App.css'
 function DetailNew() {
   
@@ -46,8 +43,8 @@ function DetailNew() {
             <Col xl={9}>
                 <div className="py-1" >
                 <LandingPageHeader title={data.title} />
-                <div className="d-flex gap-4  text-secondary cursor-hand small mt-3">
-                    <p className="d-flex justify-content-center ">
+                <div className="d-flex px-4 gap-4  text-secondary cursor-hand small mt-3">
+                    <p className="d-flex  justify-content-center ">
                     <MdDateRange size={20}/>&nbsp;<span> <Moment format="D MMM YYYY">{data.createdAt}</Moment></span>
                     </p>
                     <p className="ml-4 d-flex justify-content-center">
@@ -66,13 +63,11 @@ function DetailNew() {
                     
                 </div>
                           
-            <h2 className="title py-0">{data.title}</h2>
-                <div className="text-secondary h5 ">{data.description}</div>
+            <h2 className="title py-0 px-4">{data.title}</h2>
+                <div className="text-secondary h5 px-4 ">{data.description}</div>
                 
-                <div className="section-story-overview">
-                    <Row className="">
+                <div className="section-story-overview px-4">
                         <div className="blogwrapper" dangerouslySetInnerHTML={{ __html: data.content }} />
-                    </Row>
                 </div>
                 </div></Col>
             <Col sm={12} >
