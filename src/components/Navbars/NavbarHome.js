@@ -80,8 +80,9 @@ function NavbarHome() {
                             href="/"
                             target="_blank"
                             id="navbar-brand"
+                            style={{fontSize:'20px'}}
                         >
-                            Media Konsumen
+                            KataKonsumen
                         </NavbarBrand>
                         <UncontrolledTooltip target="#navbar-brand">
                             Designed by PT Sopwer Teknologi Indonesia
