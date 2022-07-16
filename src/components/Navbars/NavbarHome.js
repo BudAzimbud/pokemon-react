@@ -36,8 +36,8 @@ function NavbarHome() {
                     }}
                 />
             ) : null}
-            <Navbar className="fixed-top" color="info" expand="lg">
-                <Container >
+            <Navbar className="fixed-top " color="info" expand="lg">
+                <Container className="align-items-center" >
 
                     <UncontrolledDropdown className="button-dropdown">
                         <DropdownToggle
@@ -75,10 +75,9 @@ function NavbarHome() {
                             </DropdownItem>
                         </DropdownMenu>
                     </UncontrolledDropdown>
-                    <div className="navbar-translate">
+                    <div className="navbar-translate align-items-center">
                         <NavbarBrand
                             href="/"
-                            target="_blank"
                             id="navbar-brand"
                             style={{fontSize:'20px'}}
                         >
