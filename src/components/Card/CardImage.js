@@ -11,7 +11,6 @@ function CardImage(props) {
     const styleVerified = props.author.isVerified ? "text-info" : "text-secondary"
     return (
         <Col xl={6} sm={12} md={6} className="wrapper-card font-monserrat" >
-            <Link to={"berita/" + props.slug} >
                 <Card>
                     <CardImg
                         alt="Card image cap"
@@ -45,7 +44,6 @@ function CardImage(props) {
                        </div>
                     </CardBody>
                 </Card>
-            </Link>
         </Col >
     )
 }
