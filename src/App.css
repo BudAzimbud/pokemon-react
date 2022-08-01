@@ -22,6 +22,14 @@
   cursor: pointer;
 }
 
+.p-top-10{
+  padding-top: 10px;
+}
+
+icon-google{
+  font-size: 14px;
+  color:blue;
+}
 /* query on max tablet */
 @media only screen and (max-width: 900px) {
     .wrapper-children {

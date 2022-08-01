@@ -35,7 +35,7 @@ function CardImage(props) {
                         })
                         }
                        </div>
-                       <div className='mt-2' style={{color:'#6e6b7b'}}>
+                       <div className='mt-2' style={{color:'#6e6b7b' , height:'5vh'}}>
                             {props.description}
                        </div>
                        <div className='mt-2 border-top py-2  d-flex justify-content-between'>
