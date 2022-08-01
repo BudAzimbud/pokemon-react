@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory, useLocation } from "react-router-dom";
 import { AiOutlineSearch, AiOutlineUser } from "react-icons/ai";
 // reactstrap components
 import {
@@ -25,7 +25,8 @@ import Swal from "sweetalert2";
 import axios from "axios";
 function NavbarHome() {
   const [collapseOpen, setCollapseOpen] = React.useState(false);
-
+    const history = useHistory()
+    const location = useLocation()
   return (
     <>
       {collapseOpen ? (
@@ -124,8 +125,8 @@ function NavbarHome() {
                 </Form>
               </NavItem>
               <NavItem>
-                <NavLink to="/index" tag={Link}>
-                  KIRIM SURAT
+                <NavLink target={"_blank"} href="https://katakonsumen-portal.web.app"  tag={'a'}>
+                  KIRIM SURAT 
                 </NavLink>
               </NavItem>
               <NavItem>
@@ -158,115 +159,125 @@ function NavbarHome() {
                                     REVIEW
                                 </NavLink>
                             </NavItem> */}
-              {/* <NavItem>
-                                <UncontrolledDropdown nav>
-                                    <DropdownToggle
-                                        aria-haspopup={true}
-                                        caret
-                                        color="default"
-                                        data-toggle="dropdown"
-                                        href="#pablo"
-                                        id="navbarDropdownMenuLink"
-                                        nav
-                                        onClick={e => e.preventDefault()}
-                                    >
-                                        Topik Lainnya
-                                    </DropdownToggle>
-                                    <DropdownMenu aria-labelledby="navbarDropdownMenuLink">
-                                        <DropdownItem
-                                            href="#pablo"
-                                            onClick={e => e.preventDefault()}
-                                        >
-                                            Action
-                                        </DropdownItem>
-                                        <DropdownItem
-                                            href="#pablo"
-                                            onClick={e => e.preventDefault()}
-                                        >
-                                            Another action
-                                        </DropdownItem>
-                                        <DropdownItem
-                                            href="#pablo"
-                                            onClick={e => e.preventDefault()}
-                                        >
-                                            Something else here
-                                        </DropdownItem>
-                                    </DropdownMenu>
-                                </UncontrolledDropdown>
-                            </NavItem> */}
+                            {localStorage.getItem("access_token")?
+                             <NavItem>
+                             <UncontrolledDropdown nav>
+                               <DropdownToggle
+                                 aria-haspopup={true}
+                                 caret
+                                 color="default"
+                                 data-toggle="dropdown"
+                                 href="#pablo"
+                                 id="navbarDropdownMenuLink"
+                                 nav
+                                 onClick={(e) => e.preventDefault()}
+                               >
+                                 <img
+                                   alt="Card image cap"
+                                   src="https://picsum.photos/318/180"
+                                   top
+                                   className="rounded-circle"
+                                   width="30px"
+                                   height={"30px"}
+                                 />
+                               </DropdownToggle>
+                               <DropdownMenu aria-labelledby="navbarDropdownMenuLink">
+                                 <DropdownItem
+                                   href="#pablo"
+                                   onClick={(e) => e.preventDefault()}
+                                 >
+                                   Profile
+                                 </DropdownItem>
+                                 <DropdownItem
+                                   href="#pablo"
+                                   onClick={(e) => e.preventDefault()}
+                                 >
+                                   Setting
+                                 </DropdownItem>
+                                 <DropdownItem
+                                   href="#pablo"
+                                   onClick={(e) => {e.preventDefault()
+                                    localStorage.removeItem("access_token")
+                                    history.push(location.pathname)
+                                }}
+                                 >
+                                   Logout
+                                 </DropdownItem>
+                               </DropdownMenu>
+                             </UncontrolledDropdown>
+                           </NavItem>:    
+                                <NavItem>
+                                <Link
+                                  to={"#"}
+                                  onClick={(event) => {
+                                    event.preventDefault();
+                                    Swal.fire({
+                                      html: `
+                                                        <div class="container py-4">
+                                                        <p>Kata konsumen</p>
+                                                        <div class="bg-dark text-light px-5 p-top-10">
+                                                            <h3 class="px-2 bg-light   text-secondary ">Sign in</h3>
+                                                        </div>      
+                                                        <div class="mt-3">
+                                                        <input type="text" required id="username" class="form-control rounded p-3" placeholder="Username">
+                                                        <input type="password" required id="password" class="form-control rounded p-3 mt-4" placeholder="Password">
+                                                        </div>
+                                                        <div class="mt-3 text-center">
+                                                            <p>Or</p>
+                                                        </div>
+                                                        <a href="/" class="h2 " >
+                                                        <i class="fa-brands fa-google"></i>
+                                                        </a>
+                                                        </div>`,
+                                      confirmButtonText: "Sign in",
+                                      focusConfirm: false,
+                                      showCloseButton: true,
+                                      preConfirm: () => {
+                                        const username =
+                                          Swal.getPopup().querySelector("#username").value;
+                                        const password =
+                                          Swal.getPopup().querySelector("#password").value;
+                                        let response = true
+                                        axios
+                                          .post(
+                                            `${process.env.REACT_APP_URL_BACKEND}/auth/signin`,
+                                            {
+                                              email: username,
+                                              password: password,
+                                            }
+                                          )
+                                          .then((res) => {
+                                            localStorage.setItem(
+                                              "access_token",
+                                              res.data.accessToken
+                                            );
+                                            return history.push(location.pathname)
+                                          })
+                                          .catch((err) => {
+                                            console.log(err);
+                
+                                            response = false;
+                                          });
+                                        if (!response) {
+                                          Swal.showValidationMessage(`Your account is wrong`);
+                                        }
+                                      },
+                                    });
+                                  }}
+                                >
+                                  <NavLink id="login-tooltip">
+                                    <AiOutlineUser />
+                                    <p className="d-lg-none d-xl-none">Masuk</p>
+                                  </NavLink>
+                                </Link>
+                                <UncontrolledTooltip target="#login-tooltip">
+                                  Masuk
+                                </UncontrolledTooltip>
+                              </NavItem>
+                        }
+         
 
-              <NavItem>
-                <Link
-                  to={"#"}
-                  onClick={(event) => {
-                    event.preventDefault();
-                    Swal.fire({
-                      html: `
-                                        <div class="container py-4">
-                                        <p>Kata konsumen</p>
-                                        <div class="bg-dark text-light px-5 p-top-10">
-                                            <h3 class="px-2 bg-light   text-secondary ">Sign in</h3>
-                                        </div>      
-                                        <div class="mt-3">
-                                        <input type="text" required id="username" class="form-control rounded p-3" placeholder="Username">
-                                        <input type="password" required id="password" class="form-control rounded p-3 mt-4" placeholder="Password">
-                                        </div>
-                                        <div class="mt-3 text-center">
-                                            <p>Or</p>
-                                        </div>
-                                        <a href="/" class="h2 " >
-                                        <i class="fa-brands fa-google"></i>
-                                        </a>
-                                        </div>`,
-                      confirmButtonText: "Sign in",
-                      focusConfirm: false,
-                      showCloseButton: true,
-                      preConfirm: () => {
-                        const username =
-                          Swal.getPopup().querySelector("#username").value;
-                        const password =
-                          Swal.getPopup().querySelector("#password").value;
-                            let response
-                            console.log(username)
-                          axios
-                            .post(
-                              `${process.env.REACT_APP_URL_BACKEND}/auth/signin`,
-                              {
-                                email:username,
-                                password:password
-                              }
-                            )
-                            .then((res) => {
-                              localStorage.setItem(
-                                "access_token",
-                                res.data.accessToken
-                              );
-                              response = true
-                             
-                            })
-                            .catch((err) => {
-                              console.log(err);
-                           
-                              response = false
-                            });
-                            if(!response){
-                                Swal.showValidationMessage(
-                                    `Your account is wrong`
-                                  );
-                            }
-                      },
-                    })
-                  }}
-                >
-                  <NavLink id="login-tooltip">
-                    <AiOutlineUser />
-                    <p className="d-lg-none d-xl-none">Masuk</p>
-                  </NavLink>
-                </Link>
-                <UncontrolledTooltip target="#login-tooltip">
-                  Masuk
-                </UncontrolledTooltip>
-              </NavItem>
+         
             </Nav>
           </Collapse>
         </Container>
