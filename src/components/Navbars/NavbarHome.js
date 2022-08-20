@@ -237,7 +237,6 @@ function NavbarHome() {
                                           Swal.getPopup().querySelector("#username").value;
                                         const password =
                                           Swal.getPopup().querySelector("#password").value;
-                                        let response = true
                                         axios
                                           .post(
                                             `${process.env.REACT_APP_URL_BACKEND}/auth/signin`,
@@ -251,16 +250,13 @@ function NavbarHome() {
                                               "access_token",
                                               res.data.accessToken
                                             );
-                                            return history.push(location.pathname)
+                                             return history.push(location.pathname)
                                           })
                                           .catch((err) => {
                                             console.log(err);
-                
-                                            response = false;
+                                            Swal.fire('Failed login', 'Your account is not valid' , 'error')
                                           });
-                                        if (!response) {
-                                          Swal.showValidationMessage(`Your account is wrong`);
-                                        }
+                                     
                                       },
                                     });
                                   }}
