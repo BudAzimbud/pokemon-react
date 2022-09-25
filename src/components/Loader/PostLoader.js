@@ -3,7 +3,7 @@ import ContentLoader from "react-content-loader"
 import { Col } from "reactstrap"
 
 const HomeLoader = (props) => (
-    <Col xl={6} sm={12} md={6} style={{ width: '40rem' }}>
+    <Col xl={3} sm={6} md={3} style={{ marginRight:"10px" }}>
         <ContentLoader viewBox="0 0 600 280" backgroundColor="#E7E7E7"
             foregroundColor="#ecebeb" height={400} width={800} {...props}>
             <rect x="3" y="3" rx="10" ry="10" width="300" height="180" />

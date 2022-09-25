@@ -23,8 +23,7 @@ function DefaultFooter() {
               </li>
               <li>
                 <a
-                  href="http://presentation.creative-tim.com?ref=nukr-default-footer"
-                  target="_blank"
+                href="#"
                 >
                   About Us
                 </a>

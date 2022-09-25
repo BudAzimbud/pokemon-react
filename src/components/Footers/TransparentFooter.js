@@ -13,7 +13,7 @@ function TransparentFooter() {
        
             <li>
               <a
-                href="http://presentation.creative-tim.com?ref=nukr-transparent-footer"
+                href="#"
                 target="_blank"
               >
                 About Us
@@ -23,12 +23,10 @@ function TransparentFooter() {
           </ul>
         </nav>
         <div className="copyright" id="copyright">
-          © 2022, Designed by{" "}
           <a
-            href="https://www.linkedin.com/company/sopwer/about/"
-            target="_blank"
+            href="#"
           >
-            PT Sopwer Teknologi Indonesia
+            PokeMon Go !!!
           </a>
           . Coded by{" "}
           <a

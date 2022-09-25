@@ -1,6 +1,9 @@
 import NavbarHome from 'components/Navbars/NavbarHome'
 import TransparentFooter from 'components/Footers/TransparentFooter';
 import React from 'react'
+import { useDispatch } from 'react-redux';
+import { findPokemon } from 'Redux/pokemon';
+import { getAllPokemon } from 'Redux/pokemon';
 
 function PublicRoute({ children }) {
     React.useEffect(() => {
@@ -15,9 +18,19 @@ function PublicRoute({ children }) {
         };
     });
 
+    const dispatch = useDispatch()
+
+
+    const onSearch = (name)=>{
+        if(name===""){
+            return dispatch(getAllPokemon({limit:30}))
+        }
+        dispatch(findPokemon({name}))
+    }
+
     return (
         <>
-            <NavbarHome />
+            <NavbarHome onSearch={onSearch} />
             <div className='mt-5 wrapper-children'>
                 {children}
             </div>
