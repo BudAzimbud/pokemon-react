@@ -37,16 +37,16 @@ export default function PokemonModal({ setModalLive, modalLive, pokemon }) {
             </span>
             <br></br>
             <br></br>
-            <span>Ability : </span>
+            <span className="text-danger">Ability : </span>
             { 
                 pokemon.abilities.map(({ability})=> (
-                  <span key={ability.name} className='p-1 bg-warning text-light rounded mr-1'>{ability.name}</span>
+                  <span key={ability.name} className='p-1 bg-info text-light rounded mr-1'>{ability.name}</span>
                 ))
               }
             {pokemon.stats.map((stat, index) => (
               <div className="text-left" key={index}>
-                <span>{stat.stat.name}</span>
-                <Progress color="primary" max="100" value={stat.base_stat}>
+                <span >{stat.stat.name}</span>
+                <Progress color={parseInt(stat.base_stat) < 50  ? "success" : parseInt(stat.base_stat) < 100 ? "warning" : "danger"  } max="100" value={stat.base_stat}>
                   <span className="progress-value">{stat.base_stat}</span>
                 </Progress>
               </div>
