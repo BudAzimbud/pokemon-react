@@ -76,7 +76,7 @@ function NavbarHome({onSearch}) {
                         <AiOutlineSearch />
                       </InputGroupText>
                     </InputGroupAddon>
-                    <Input  onChange={(event)=>setSearch(event.target.value)} placeholder="Search..." type="text"></Input>
+                    <Input  onChange={(event)=>setSearch(event.target.value)} placeholder="type Pokemon hit enter.." type="text"></Input>
                   </InputGroup>
                 </Form>
               </NavItem>
