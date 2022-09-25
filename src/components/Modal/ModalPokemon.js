@@ -27,10 +27,16 @@ export default function PokemonModal({ setModalLive, modalLive, pokemon }) {
             height={200}
           />
           <div className="p-3 ">
-            <h3 className="fw-bold text-dark">
-              Name : {pokemon.name} , Base Experience :{" "}
+            <span style={{fontSize:"30px"}} className="fw-bold text-dark">
+              Name : {pokemon.name} 
+            </span>
+            <br></br>
+            <span className="fw-bold text-dark">
+              Base Experience :{" "}
               {pokemon.base_experience}{" "}
-            </h3>
+            </span>
+            <br></br>
+            <br></br>
             <span>Ability : </span>
             { 
                 pokemon.abilities.map(({ability})=> (
