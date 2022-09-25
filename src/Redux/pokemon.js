@@ -33,11 +33,11 @@ export const pokemonSlice = createSlice({
     builder
     .addCase(getAllPokemon.fulfilled , (state,action)=>{
         state.pokemons = action.payload
-    }).
-    addCase(findPokemon.fulfilled , (state,action)=>{
+    })
+    .addCase(findPokemon.fulfilled , (state,action)=>{
         state.pokemons = action.payload
-    }).
-    addCase(findPokemon.rejected , (state,action)=>{
+    })
+    .addCase(findPokemon.rejected , (state,action)=>{
         state.notFound = true
     })
   }

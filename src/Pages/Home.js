@@ -1,6 +1,6 @@
 import CardImage from "components/Card/CardImage";
 import React, { Fragment, useEffect, useState } from "react";
-import { Row, Col, Spinner, Button, Card, CardBody, CardHeader, CardTitle } from "reactstrap";
+import { Row, Col, Spinner, Button } from "reactstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllPokemon } from "Redux/pokemon";
 import { clearFound } from "Redux/pokemon";

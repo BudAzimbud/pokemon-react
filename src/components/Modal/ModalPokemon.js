@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Modal, Badge } from "reactstrap";
+import React from "react";
+import { Modal } from "reactstrap";
 import { Progress } from "reactstrap";
 export default function PokemonModal({ setModalLive, modalLive, pokemon }) {
   return (
@@ -23,6 +23,7 @@ export default function PokemonModal({ setModalLive, modalLive, pokemon }) {
             src={pokemon.sprites.front_default}
             className="rounded-circle border"
             width={200}
+            alt="pokemon"
             height={200}
           />
           <div className="p-3 ">
