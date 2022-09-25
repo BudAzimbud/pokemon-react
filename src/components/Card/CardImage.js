@@ -28,7 +28,7 @@ function CardImage({ pokemon }) {
             style={{ color: "#5e5873" }}
             className="fw-bold"
           >
-            {pokemon.name}
+            {pokemon.name.charAt(0).toUpperCase()+pokemon.name.slice(1)}
           </CardTitle>
           <div className="d-flex align-items-center">
             <div className="d-flex ">

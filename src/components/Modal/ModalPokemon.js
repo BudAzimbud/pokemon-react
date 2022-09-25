@@ -22,13 +22,13 @@ export default function PokemonModal({ setModalLive, modalLive, pokemon }) {
           <img
             src={pokemon.sprites.front_default}
             className="rounded-circle border"
-            width={200}
+            width={180}
             alt="pokemon"
-            height={200}
+            height={180}
           />
           <div className="p-3 ">
             <span style={{fontSize:"30px"}} className="fw-bold text-dark">
-              Name : {pokemon.name} 
+              Name Pokemon: {pokemon.name.charAt(0).toUpperCase()+pokemon.name.slice(1)} 
             </span>
             <br></br>
             <span className="fw-bold text-dark">
