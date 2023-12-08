@@ -1,5 +1,5 @@
 {
-  "name": "now-ui-kit-react",
+  "name": "pokemon-react",
   "version": "1.5.0",
   "private": true,
   "dependencies": {
@@ -11,7 +11,7 @@
     "gulp-append-prepend": "1.0.9",
     "install": "^0.13.0",
     "moment": "2.29.1",
-    "node-sass": "6.0.0",
+    "node-sass": "^8.0.0",
     "nouislider": "15.1.0",
     "npm": "^8.12.2",
     "perfect-scrollbar": "^1.5.5",
@@ -32,7 +32,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && gulp licenses",
+    "build": "SET NODE_OPTIONS=--openssl-legacy-provider && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",

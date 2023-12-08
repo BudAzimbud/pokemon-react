@@ -1,4 +1,29 @@
+/*!
 
+ =========================================================
+ * Now UI Kit React - v1.5.0 based on Now UI Kit - v1.3.0
+ =========================================================
+
+ * Product Page: https://www.creative-tim.com/product/now-ui-kit-react
+ * Copyright 2021 Creative Tim (http://www.creative-tim.com)
+ * Licensed under MIT (https://github.com/creativetimofficial/now-ui-kit-react/blob/main/LICENSE.md)
+
+ * Designed by www.invisionapp.com Coded by www.creative-tim.com
+
+ =========================================================
+
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+ */
+/*     brand Colors              */
+/*      light colors         */
+/* ========================================================================
+ * bootstrap-switch - v3.3.2
+ * http://www.bootstrap-switch.org
+ * ========================================================================
+ * Copyright 2012-2013 Mattia Larentis
+ * http://www.apache.org/licenses/LICENSE-2.0
+ */
 .bootstrap-switch {
   display: inline-block;
   direction: ltr;
@@ -2752,8 +2777,8 @@ Created using IcoMoon - icomoon.io
 -------------------------------- */
 @font-face {
   font-family: 'Nucleo Outline';
-  src: url("../fonts/nucleo-outline.eot");
-  src: url("../fonts/nucleo-outline.eot") format("embedded-opentype"), url("../fonts/nucleo-outline.woff2") format("woff2"), url("../fonts/nucleo-outline.woff") format("woff"), url("../fonts/nucleo-outline.ttf") format("truetype");
+  src: url("~assets/fonts/nucleo-outline.eot");
+  src: url("~assets/fonts/nucleo-outline.eot") format("embedded-opentype"), url("~assets/fonts/nucleo-outline.woff2") format("woff2"), url("~assets/fonts/nucleo-outline.woff") format("woff"), url("~assets/fonts/nucleo-outline.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
@@ -5825,6 +5850,9 @@ td.rdtYear:hover {
   color: #2CA8FF;
   font-size: 21px; }
 
+.popover .arrow:before {
+  border-color: transparent !important; }
+
 .popover-primary .popover {
   background-color: #f96332; }
   .popover-primary .popover .popover-body {
@@ -5840,6 +5868,8 @@ td.rdtYear:hover {
   .popover-primary .popover .popover-header {
     color: #FFFFFF;
     opacity: .6; }
+  .popover-primary .popover .arrow:after {
+    border-left-color: #f96332; }
 
 .popover-info .popover {
   background-color: #2CA8FF; }
@@ -5856,6 +5886,8 @@ td.rdtYear:hover {
   .popover-info .popover .popover-header {
     color: #FFFFFF;
     opacity: .6; }
+  .popover-info .popover .arrow:after {
+    border-left-color: #2CA8FF; }
 
 .popover-warning .popover {
   background-color: #FFB236; }
@@ -5872,6 +5904,8 @@ td.rdtYear:hover {
   .popover-warning .popover .popover-header {
     color: #FFFFFF;
     opacity: .6; }
+  .popover-warning .popover .arrow:after {
+    border-left-color: #FFB236; }
 
 .popover-danger .popover {
   background-color: #FF3636; }
@@ -5888,6 +5922,8 @@ td.rdtYear:hover {
   .popover-danger .popover .popover-header {
     color: #FFFFFF;
     opacity: .6; }
+  .popover-danger .popover .arrow:after {
+    border-left-color: #FF3636; }
 
 .popover-success .popover {
   background-color: #18ce0f; }
@@ -5904,6 +5940,20 @@ td.rdtYear:hover {
   .popover-success .popover .popover-header {
     color: #FFFFFF;
     opacity: .6; }
+  .popover-success .popover .arrow:after {
+    border-left-color: #18ce0f; }
+
+.bs-tooltip-auto[x-placement^=left] .arrow::before, .bs-tooltip-left .arrow::before {
+  border-left-color: #FFFFFF; }
+
+.bs-tooltip-auto[x-placement^=right] .arrow::before, .bs-tooltip-right .arrow::before {
+  border-right-color: #FFFFFF; }
+
+.bs-tooltip-auto[x-placement^=top] .arrow::before, .bs-tooltip-top .arrow::before {
+  border-top-color: #FFFFFF; }
+
+.bs-tooltip-auto[x-placement^=bottom] .arrow::before, .bs-tooltip-bottom .arrow::before {
+  border-bottom-color: #FFFFFF; }
 
 .clear-filter[filter-color="blue"] {
   background: rgba(44, 44, 44, 0.2);
@@ -5930,7 +5980,9 @@ td.rdtYear:hover {
 @media screen and (max-width: 991px) {
   .sidebar-collapse .navbar-collapse:before {
     background: #2CA8FF;
-    background: linear-gradient(#2CA8FF, #2c2c2c 80%); } }
+    background: linear-gradient(#2CA8FF, #2c2c2c 80%); }
+  .navbar-nav .dropdown-menu {
+    position: static !important; } }
 
 @media screen and (max-width: 768px) {
   .nav-tabs {
